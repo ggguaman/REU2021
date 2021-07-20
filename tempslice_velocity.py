@@ -13,5 +13,8 @@ pynbody.analysis.angmom.sideon(s)
 #creating temp slice with velocity plot
 sph.image(s.g,qty="vr",width=50,denoise=True,approximate_fast=False)
 
+#plotting BH position from findingBH.py
+plt.plot(0.83406139,-0.32506914, 'ro')
+
 #plt.show()
 plt.savefig("tempslice_velocity.png")
