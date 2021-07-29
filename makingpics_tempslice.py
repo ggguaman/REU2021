@@ -26,4 +26,5 @@ plt.xlabel("X-axis")
 plt.ylabel("Y-axis")
 plt.title('Gas temp')
 
-plt.show()
+#plt.show()
+plt.savefig("gashist.png")
