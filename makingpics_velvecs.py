@@ -22,4 +22,5 @@ sph.velocity_image(s.g,vector_color="cyan",qty="temp",width=50,denoise=True,appr
 pynbody.analysis.angmom.faceon(s)
 s['pos'].convert_units('Mpc')
 sph.velocity_image(s.g,width='3 Mpc',cmap="Greys_r", mode='stream',units='Msol kpc^-2',density=2.0,vector_resolution=100,vmin=1e-1,subplot=axs[1],show_cbar=False,vector_color='black')
-plt.show()
+#plt.show()
+plt.savefig("velvecs.png")

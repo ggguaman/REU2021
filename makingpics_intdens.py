@@ -14,5 +14,5 @@ pynbody.analysis.angmom.faceon(s)
 #creating image
 sph.image(s.g,qty="rho",units="g cm^-2",width=100)
 
-#plt.savefig("intdensplot.png")
-plt.show()
+plt.savefig("intdens.png")
+#plt.show()
