@@ -39,5 +39,5 @@ print("The black hole's position is",BH['pos'].in_units('kpc'))
 #plotting BH position
 plt.plot(0.83406139,-0.32506914, 'ro')
 
-plt.show()
-#plt.savefig("tempslice_velocity.png")
+#plt.show()
+plt.savefig("tempslice_velocity.png")
