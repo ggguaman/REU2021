@@ -12,7 +12,7 @@ s.physical_units()
 pynbody.analysis.angmom.faceon(s)
 
 #creating image
-sph.image(s.g,qty="rho",units="g cm^-2",width=100)
+sph.image(s.g,qty="rho",units="g cm^-2",width=10)
 
 plt.savefig("intdens.png")
 #plt.show()
