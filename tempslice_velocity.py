@@ -15,7 +15,7 @@ pynbody.analysis.angmom.sideon(s)
 s.rotate_x(90)
 
 #creating temp slice with velocity plot
-sph.image(s.g,qty="vr",qty_min=-60,denoise=True,approximate_fast=False,log=False)
+sph.image(s.g,qty="vr",vmin=-60,vmax=60,denoise=True,approximate_fast=False,log=False)
 
 #function to find BH
 def findBH(s):
