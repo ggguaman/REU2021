@@ -31,13 +31,21 @@ with pynbody.analysis.halo.center(s, mode='hyb'):
 
 BHposition = BH['pos']
 print("The black hole's position is",BH['pos'].in_units('kpc'))
-#BHx=BHposition[0,0]
-#x=BH['pos'][0,0]
-#y=BH['pos'][0,1]
-#z=BH['pos'][0,2]
-#print(x)
+
+#putting BH x in column
+BHx=BHposition[[0],0]
+print(BHx)
+
+#putting BH y in column
+BHy=BHposition[[0],1]
+print(BHy)
+
+#putting BH z in column
+BHz=BHposition[[0],2]
+print(BHy)
+
 #plotting BH position
-plt.plot(0.83406139,-0.32506914, 'ro')
+plt.plot(BHx,BHy, 'ro')
 
 #plt.show()
 plt.savefig("tempslice_velocity.png")
