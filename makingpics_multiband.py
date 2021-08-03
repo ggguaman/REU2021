@@ -15,6 +15,5 @@ pynbody.analysis.angmom.sideon(s)
 #creating image using default bands(i,v,u)
 pynbody.plot.stars.render(s,width='10 kpc')
 
-#sph.image(s.s,width=20,denoise=True,approximate_fast=False)
 #plt.show()
 plt.savefig("multiband.png")

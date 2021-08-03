@@ -10,6 +10,10 @@ s.physical_units()
 #centering halo
 pynbody.analysis.angmom.sideon(s)
 
-sph.image(s.g,qty="vr",width=50,denoise=True,approximate_fast=False)
+#filter to only use ionised gas
+GasFilter = pynbody.filt.HighPass('temp','4.2')
+
+#creating image to show velocity of ionised gas
+sph.image(s.g,GasFilter,qty="vr",width=10,denoise=True,approximate_fast=False,log=False)
 
 plt.show()
