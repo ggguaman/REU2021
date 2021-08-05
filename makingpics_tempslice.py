@@ -1,3 +1,4 @@
+#gas tempurature plot
 import pynbody
 import numpy as np
 from matplotlib import colors
@@ -14,17 +15,7 @@ s.physical_units()
 pynbody.analysis.angmom.sideon(s)
 
 #creating slice to show gas temp
-#sph.image(s.g,qty="temp",width=10,denoise=True,approximate_fast=False)
+sph.image(s.g,qty="temp",width=10,denoise=True,approximate_fast=False,log=True)
 
 #plt.show()
-#plt.savefig("tempslice.png")
-
-plt.hist(np.log10(s.g['temp']),color='green',bins='fd')
-
-#customizing hist
-plt.xlabel("Log(temp)")
-plt.ylabel("Number of particles")
-plt.title('Gas temp')
-
-#plt.show()
-plt.savefig("gashist.png")
+plt.savefig("tempslice.png")
