@@ -14,5 +14,5 @@ pynbody.analysis.angmom.faceon(s)
 #creating image
 sph.image(s.g,qty="rho",units="g cm^-2",width=10)
 
-plt.savefig("intdens.png")
+plt.savefig("cptmarvel_intdens.png")
 #plt.show()
