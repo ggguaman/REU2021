@@ -18,10 +18,20 @@ BH=findBH(s)
 print("The number of black holes is",len(BH))
 
 #distance BH is from galaxy
-with pynbody.analysis.halo.center(s, mode='hyb'):
-    print([s],['pos'])
+#with pynbody.analysis.halo.center(s, mode='hyb'):
+print([s],['pos'])
 
 BHposition = BH['pos']
+print("The black hole's postion is", BHposition)
 
-#print("The black hole's postion is", BHposition)
-print(BH['pos'].in_units('kpc'))
+#print(BH['pos'].in_units('kpc'))
+
+for i in range(len(BH)):
+    #putting BH x in column
+    BHx=BHposition[[0],0]
+    #print(BHx)
+    #putting BH y in column
+    BHy=BHposition[[0],1]
+    #print(BHy)
+    #putting BH z in column
+    BHz=BHposition[[0],2]
