@@ -13,7 +13,28 @@ s.physical_units()
 pynbody.analysis.angmom.faceon(s)
 
 #creating gas density slice
-sph.image(s.g,qty="rho",units="g cm^-3",width=10)
+sph.image(s.g,qty="rho",units="g cm^-3",width=30)
 
-plt.show()
-#plt.savefig("cosmo25_denslice.png")
+#function to find BH
+def findBH(s):
+    BHfilter = pynbody.filt.LowPass('tform',0.0)
+    BH = s.stars[BHfilter]
+    return BH
+BH = findBH(s)
+print("The number of black holes is",len(BH))
+
+#distance BH is from galaxy
+#with pynbody.analysis.halo.center(s, mode='hyb'):
+print([s],['pos'])
+
+BHposition = BH['pos']
+print("The black hole's position is", BHposition)
+
+for i in range(len(BH)):
+    BHx=BHposition[[i],0]
+    BHy=BHposition[[i],1]
+    BHz=BHposition[[i],2]
+    plt.plot(BHx,BHy, 'ro')
+
+#plt.show()
+plt.savefig("cosmo25_dens.png")
