@@ -40,4 +40,4 @@ for i in range(len(BH)):
     plt.plot(BHx,BHy, 'ro')
 
 #plt.show()
-plt.savefig("cosmo25_temp.png")
+plt.savefig("galaxy109_temp.png")
