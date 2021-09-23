@@ -14,7 +14,7 @@ s=pynbody.load('/mnt/data0/jillian/gguaman/cptmarvel.5.std')
 s.physical_units()
 
 #centering halo
-pynbody.analysis.angmom.sideon(s)
+pynbody.analysis.angmom.faceon(s)
 
 #creating slice to show gas temp
 sph.image(s.g,qty="temp",width=10,denoise=True,approximate_fast=False,log=True)
@@ -44,10 +44,10 @@ print(BHy)
 
 #putting BH z in column
 BHz=BHposition[[0],2]
-print(BHy)
+print(BHz)
 
 #plotting BH position
 plt.plot(BHx,BHy, 'ro')
 
 #plt.show()
-plt.savefig("tempslice.png")
+plt.savefig("cptmarvel_temp.png")
