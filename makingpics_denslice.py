@@ -43,11 +43,9 @@ print(BHy)
 
 #putting BH z in column
 BHz=BHposition[[0],2]
-print(BHy)
+print(BHz)
 
 #plotting BH position
 plt.plot(BHx,BHy, 'ro')
 
-#plt.show()
-plt.savefig("denslice.png")
-
+plt.savefig("cptmarvel_dens.png")
