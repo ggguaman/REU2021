@@ -11,8 +11,8 @@ s=pynbody.load('/mnt/data0/jillian/gguaman/cptmarvel.5.std')
 s.physical_units()
 
 #centering halo
-pynbody.analysis.angmom.sideon(s)
-s.rotate_x(90)
+pynbody.analysis.angmom.faceon(s)
+#s.rotate_x(90)
 
 #creating temp slice with velocity plot
 sph.image(s.g,qty="vr",denoise=True,approximate_fast=False,log=False)
@@ -42,10 +42,10 @@ print(BHy)
 
 #putting BH z in column
 BHz=BHposition[[0],2]
-print(BHy)
+print(BHz)
 
 #plotting BH position
 plt.plot(BHx,BHy, 'ro')
 
 #plt.show()
-plt.savefig("tempslice_velocity.png")
+plt.savefig("cptmarvel_velocity.png")
