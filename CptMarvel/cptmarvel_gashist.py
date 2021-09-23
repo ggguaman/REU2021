@@ -21,4 +21,4 @@ plt.ylabel("Number of particles")
 plt.title('Gas temp')
 
 #plt.show()
-plt.savefig("gashist.png")
+plt.savefig("cptmarvel_gashist.png")
