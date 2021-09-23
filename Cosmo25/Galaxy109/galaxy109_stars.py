@@ -16,4 +16,4 @@ pynbody.analysis.angmom.sideon(s)
 pynbody.plot.stars.render(s,width='30 kpc')
 
 #plt.show()
-plt.savefig("cosmo25_stars.png")
+plt.savefig("galaxy109_stars.png")
