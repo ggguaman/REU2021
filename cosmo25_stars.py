@@ -13,7 +13,7 @@ s.physical_units()
 pynbody.analysis.angmom.sideon(s)
 
 #creating image using default bands(i,v,u)
-pynbody.plot.stars.render(s,width='10 kpc')
+pynbody.plot.stars.render(s,width='30 kpc')
 
-plt.show()
-#plt.savefig("cosmo25_stars.png")
+#plt.show()
+plt.savefig("cosmo25_stars.png")
