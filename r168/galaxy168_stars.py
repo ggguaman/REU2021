@@ -13,7 +13,7 @@ s.physical_units()
 pynbody.analysis.angmom.faceon(s)
 
 #creating image using default bands(i,v,u)
-pynbody.plot.stars.render(s,width='40 kpc')
+pynbody.plot.stars.render(s,width='18 kpc')
 
 #plt.show()
 plt.savefig("galaxy168_stars.png")
