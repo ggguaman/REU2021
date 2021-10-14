@@ -45,5 +45,5 @@ BHz=BHposition[[0],2]
 #plotting BH position
 plt.plot(BHx,BHy, 'ro')
 
-plt.show()
-#plt.savefig("galaxy168_velocity.png")
+#plt.show()
+plt.savefig("galaxy168_velocity.png")
