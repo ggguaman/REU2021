@@ -15,7 +15,7 @@ s.physical_units()
 pynbody.analysis.angmom.faceon(s)
 
 #creating gas velocity plot
-sph.image(s.g,qty="vr",width=50,denoise=True,approximate_fast=False,log=False)
+sph.image(s.g,qty="vr",width=40,denoise=True,approximate_fast=False,log=False)
 
 #function to find BH
 def findBH(s):

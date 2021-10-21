@@ -15,7 +15,7 @@ s.physical_units()
 pynbody.analysis.angmom.faceon(s)
 
 #creating slice to show gas temp
-sph.image(s.g,qty="temp",width=30,denoise=True,approximate_fast=False,log=True)
+sph.image(s.g,qty="temp",width=40,denoise=True,approximate_fast=False,log=True)
 
 #function to find BH
 def findBH(s):

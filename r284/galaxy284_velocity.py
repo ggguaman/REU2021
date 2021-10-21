@@ -7,13 +7,15 @@ import matplotlib.pyplot as plt
 
 #loading snapshot
 s=pynbody.load('/mnt/data0/jillian/gguaman/r284/cosmo25p.768sg1bwK1BHe75.007779')
+
+#setting to physical units
 s.physical_units()
 
 #centering halo
 pynbody.analysis.angmom.faceon(s)
 
 #creating gas velocity plot
-sph.image(s.g,qty="vr",width=30,denoise=True,approximate_fast=False,log=False)
+sph.image(s.g,qty="vr",width=40,denoise=True,approximate_fast=False,log=False)
 
 #function to find BH
 def findBH(s):
