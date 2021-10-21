@@ -1,4 +1,4 @@
-#galaxy 142 gas density code
+#galaxy 142 gas density code with BH pos
 import pynbody
 import pynbody.plot.sph as sph
 import matplotlib.pyplot as plt
@@ -13,7 +13,7 @@ s.physical_units()
 pynbody.analysis.angmom.faceon(s)
 
 #creating gas density slice
-sph.image(s.g,qty="rho",units="g cm^-3",width=50)
+sph.image(s.g,qty="rho",units="g cm^-3",width=40)
 
 #function to find BH
 def findBH(s):

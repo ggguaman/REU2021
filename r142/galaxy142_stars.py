@@ -1,4 +1,4 @@
-#galaxy 142 stars code
+#galaxy 142 stars code with BH pos
 import pynbody
 import pynbody.plot.sph as sph
 import matplotlib.pylab as plt
@@ -13,7 +13,7 @@ s.physical_units()
 pynbody.analysis.angmom.faceon(s)
 
 #creating image using default bands(i,v,u)
-pynbody.plot.stars.render(s,width='8 kpc')
+pynbody.plot.stars.render(s,width='40 kpc')
 
 #plt.show()
 plt.savefig("galaxy142_stars.png")

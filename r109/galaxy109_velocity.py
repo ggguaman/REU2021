@@ -1,4 +1,4 @@
-#cosmo 25 gas velocity code
+#r109 gas velocity code with BHs pos
 import pynbody
 import numpy as np
 import pandas as pd
@@ -14,7 +14,7 @@ s.physical_units()
 pynbody.analysis.angmom.faceon(s)
 
 #creating gas velocity plot
-sph.image(s.g,qty="vr",width=30,denoise=True,approximate_fast=False,log=False)
+sph.image(s.g,qty="vr",width=40,denoise=True,approximate_fast=False,log=False)
 
 #function to find BH
 def findBH(s):
