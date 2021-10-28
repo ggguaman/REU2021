@@ -13,7 +13,7 @@ s.physical_units()
 pynbody.analysis.angmom.faceon(s)
 
 #creating gas density slice
-sph.image(s.g,qty="rho",units="g cm^-3",width=30)
+sph.image(s.g,qty="rho",units="g cm^-3",width=40)
 
 #plt.show()
 plt.savefig("galaxy429_dens.png")
