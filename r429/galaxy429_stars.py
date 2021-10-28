@@ -14,7 +14,7 @@ pynbody.analysis.angmom.faceon(s)
 #pynbody.analysis.angmom.sideon(s)
 
 #creating image using default bands(i,v,u)
-pynbody.plot.stars.render(s,width='16 kpc')
+pynbody.plot.stars.render(s,width='12 kpc')
 
 #plt.show()
 plt.savefig("galaxy429_stars.png")
