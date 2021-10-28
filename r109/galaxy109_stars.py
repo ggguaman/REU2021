@@ -10,10 +10,10 @@ s=pynbody.load('/mnt/data0/jillian/gguaman/cosmo25p.768sg1bwK1BHe75.008192')
 s.physical_units()
 
 #centering halo
-pynbody.analysis.angmom.sideon(s)
+pynbody.analysis.angmom.faceon(s)
 
 #creating image using default bands(i,v,u)
-pynbody.plot.stars.render(s,width='40 kpc')
+pynbody.plot.stars.render(s,width='12 kpc')
 
 #plt.show()
 plt.savefig("galaxy109_stars.png")
