@@ -10,10 +10,11 @@ s=pynbody.load('/mnt/data0/jillian/gguaman/r306/cosmo25p.768sg1bwK1BHe75.007779'
 s.physical_units()
 
 #centering halo and aligning disk
-pynbody.analysis.angmom.faceon(s)
+#pynbody.analysis.angmom.faceon(s)
+pynbody.analysis.angmom.sideon(s)
 
 #creating gas density slice
-sph.image(s.g,qty="rho",units="g cm^-3",width=40)
+sph.image(s.g,qty="rho",units="g cm^-3",width=50)
 
 #function to find BH
 def findBH(s):
@@ -46,4 +47,5 @@ BHz=BHposition[[0],2]
 plt.plot(BHx,BHy, 'ro')
 
 #plt.show()
-plt.savefig("galaxy306_dens.png")
+#plt.savefig("galaxy306_dens.png")
+plt.savefig("galaxy306_dens(side).png")
