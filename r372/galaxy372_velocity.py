@@ -12,10 +12,12 @@ s=pynbody.load('/mnt/data0/jillian/gguaman/r372/cosmo25p.768sg1bwK1BHe75.007779'
 s.physical_units()
 
 #centering halo
-pynbody.analysis.angmom.faceon(s)
+#pynbody.analysis.angmom.faceon(s)
+pynbody.analysis.angmom.sideon(s)
 
 #creating gas velocity plot
-sph.image(s.g,qty="vr",width=40,denoise=True,approximate_fast=False,log=False)
+sph.image(s.g,qty="vr",width=20,denoise=True,approximate_fast=False,log=False)
 
 #plt.show()
-plt.savefig("galaxy372_velocity.png")
+#plt.savefig("galaxy372_velocity.png")
+plt.savefig("galaxy372_velocity(side).png")
