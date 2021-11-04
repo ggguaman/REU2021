@@ -12,10 +12,11 @@ s=pynbody.load('/mnt/data0/jillian/gguaman/r154/cosmo25p.768sg1bwK1BHe75.007779'
 s.physical_units()
 
 #centering halo
-pynbody.analysis.angmom.faceon(s)
+#pynbody.analysis.angmom.faceon(s)
+pynbody.analysis.angmom.sideon(s)
 
 #creating slice to show gas temp
-sph.image(s.g,qty="temp",width=40,denoise=True,approximate_fast=False,log=True)
+sph.image(s.g,qty="temp",width=50,denoise=True,approximate_fast=False,log=True)
 
 #function to find BH
 def findBH(s):
@@ -40,4 +41,5 @@ for i in range(len(BH)):
     plt.plot(BHx,BHy, 'ro')
 
 #plt.show()
-plt.savefig("galaxy154_temp.png")
+#plt.savefig("galaxy154_temp.png")
+plt.savefig("galaxy154_temp(side).png")
