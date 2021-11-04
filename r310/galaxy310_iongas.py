@@ -13,7 +13,8 @@ s=pynbody.load('/mnt/data0/jillian/gguaman/r310/cosmo25p.768sg1bwK1BHe75.007779'
 s.physical_units()
 
 #centering halo
-pynbody.analysis.angmom.faceon(s)
+#pynbody.analysis.angmom.faceon(s)
+pynbody.analysis.angmom.sideon(s)
 
 #filter to only use ionised gas
 GasFilter = pynbody.filt.HighPass('temp','15848 K')
@@ -22,4 +23,5 @@ GasFilter = pynbody.filt.HighPass('temp','15848 K')
 sph.image(s.g[GasFilter],qty="vr",vmin=-20,width=40,denoise=True,approximate_fast=False,log=False)
 
 #plt.show()
-plt.savefig("galaxy310_iongas.png")
+#plt.savefig("galaxy310_iongas.png")
+plt.savefig("galaxy310_iongas(side).png")
