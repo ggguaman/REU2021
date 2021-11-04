@@ -13,13 +13,14 @@ s=pynbody.load('/mnt/data0/jillian/gguaman/r320/cosmo25p.768sg1bwK1BHe75.007779'
 s.physical_units()
 
 #centering halo
-pynbody.analysis.angmom.faceon(s)
+#pynbody.analysis.angmom.faceon(s)
+pynbody.analysis.angmom.sideon(s)
 
 #filter to only use ionised gas
 GasFilter = pynbody.filt.HighPass('temp','15848 K')
 
 #creating image to show velocity of ionised gas
-sph.image(s.g[GasFilter],qty="vr",vmin=-20,width=40,denoise=True,approximate_fast=False,log=False)
+sph.image(s.g[GasFilter],qty="vr",vmin=-20,width=20,denoise=True,approximate_fast=False,log=False)
 
 #function to find BH
 def findBH(s):
@@ -43,4 +44,5 @@ for i in range(len(BH)):
     plt.plot(BHx,BHy, 'ro')
 
 #plt.show()
-plt.savefig("galaxy320_iongas.png")
+#plt.savefig("galaxy320_iongas.png")
+plt.savefig("galaxy320_iongas(side).png")
