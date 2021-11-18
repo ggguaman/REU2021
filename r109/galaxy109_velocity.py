@@ -8,10 +8,13 @@ from pynbody import filt, array
 
 #loading snapshot
 s=pynbody.load('/mnt/data0/jillian/gguaman/cosmo25p.768sg1bwK1BHe75.008192')
+
+#setting to physical units
 s.physical_units()
 
 #centering halo
-pynbody.analysis.angmom.faceon(s)
+#pynbody.analysis.angmom.faceon(s)
+pynbody.analysis.angmom.sideon(s)
 
 #creating gas velocity plot
 sph.image(s.g,qty="vr",width=40,denoise=True,approximate_fast=False,log=False)
@@ -38,4 +41,5 @@ for i in range(len(BH)):
     plt.plot(BHx,BHy, 'ro')
 
 #plt.show()
-plt.savefig("galaxy109_velocity.png")
+#plt.savefig("galaxy109_velocity.png")
+plt.savefig("galaxy109_velocity(side).png")

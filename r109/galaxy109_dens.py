@@ -10,7 +10,8 @@ s=pynbody.load('/mnt/data0/jillian/gguaman/cosmo25p.768sg1bwK1BHe75.008192')
 s.physical_units()
 
 #centering halo and aligning disk
-pynbody.analysis.angmom.faceon(s)
+#pynbody.analysis.angmom.faceon(s)
+pynbody.analysis.angmom.sideon(s)
 
 #creating gas density slice
 sph.image(s.g,qty="rho",units="g cm^-3",width=40)
@@ -37,4 +38,5 @@ for i in range(len(BH)):
     plt.plot(BHx,BHy, 'ro')
 
 #plt.show()
-plt.savefig("galaxy109_dens.png")
+#plt.savefig("galaxy109_dens.png")
+plt.savefig("galaxy109_dens(side).png")
