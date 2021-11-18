@@ -14,7 +14,7 @@ s.physical_units()
 pynbody.analysis.angmom.sideon(s)
 
 #creating image using default bands(i,v,u)
-pynbody.plot.stars.render(s,width='50 kpc')
+pynbody.plot.stars.render(s,width='60 kpc')
 
 #plt.show()
 #plt.savefig("galaxy154_stars.png")

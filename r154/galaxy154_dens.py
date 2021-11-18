@@ -14,7 +14,7 @@ s.physical_units()
 pynbody.analysis.angmom.sideon(s)
 
 #creating gas density slice
-sph.image(s.g,qty="rho",units="g cm^-3",width=50)
+sph.image(s.g,qty="rho",units="g cm^-3",width=60)
 
 #function to find BH
 def findBH(s):

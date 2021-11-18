@@ -20,7 +20,7 @@ pynbody.analysis.angmom.sideon(s)
 GasFilter = pynbody.filt.HighPass('temp','15848 K')
 
 #creating image to show velocity of ionised gas
-sph.image(s.g[GasFilter],qty="vr",vmin=-20,width=50,denoise=True,approximate_fast=False,log=False)
+sph.image(s.g[GasFilter],qty="vr",vmin=-20,width=60,denoise=True,approximate_fast=False,log=False)
 
 #function to find BH
 def findBH(s):
