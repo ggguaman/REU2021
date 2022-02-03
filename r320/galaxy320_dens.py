@@ -13,6 +13,11 @@ s.physical_units()
 #pynbody.analysis.angmom.faceon(s)
 pynbody.analysis.angmom.sideon(s)
 
+#sphere filter
+radius = "1 kpc"
+center = (0.4142082, -2.76123653, 1.39230917)
+sphere = s[pynbody.filt.Sphere(radius, center)]
+
 #creating gas density slice
 sph.image(s.g,qty="rho",units="g cm^-3",width=20)
 
@@ -37,6 +42,11 @@ for i in range(len(BH)):
     BHz=BHposition[[i],2]
     plt.plot(BHx,BHy, 'ro')
 
-#plt.show()
+#sphere filter
+#radius = "1 kpc"
+#center = (0.4142082, -2.76123653, 1.39230917)
+#sphere = s[pynbody.filt.Sphere(radius, center)]
+
+plt.show()
 #plt.savefig("galaxy320_dens.png")
-plt.savefig("galaxy320_dens(side).png")
+#plt.savefig("galaxy320_dens(side).png")

@@ -1,4 +1,4 @@
-#gas tempurature plot with BHs pos
+#gas density plot with BHs pos
 import pynbody
 import pynbody.plot.sph as sph
 import matplotlib.pyplot as plt
@@ -10,8 +10,8 @@ s=pynbody.load('/mnt/data0/jillian/gguaman/cosmo25p.768sg1bwK1BHe75.008192')
 s.physical_units()
 
 #centering halo and aligning disk
-#pynbody.analysis.angmom.faceon(s)
-pynbody.analysis.angmom.sideon(s)
+pynbody.analysis.angmom.faceon(s)
+#pynbody.analysis.angmom.sideon(s)
 
 #creating gas density slice
 sph.image(s.g,qty="rho",units="g cm^-3",width=40)
@@ -35,8 +35,9 @@ for i in range(len(BH)):
     BHx=BHposition[[i],0]
     BHy=BHposition[[i],1]
     BHz=BHposition[[i],2]
-    plt.plot(BHx,BHy, 'ro')
+    plt.plot(BHx,BHy,'ro')
+    plt.scatter(BHx, BHy, s=200, facecolors='none', edgecolors='b')
 
-#plt.show()
+plt.show()
 #plt.savefig("galaxy109_dens.png")
-plt.savefig("galaxy109_dens(side).png")
+#plt.savefig("galaxy109_dens(side).png")

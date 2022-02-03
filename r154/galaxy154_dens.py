@@ -10,8 +10,8 @@ s=pynbody.load('/mnt/data0/jillian/gguaman/r154/cosmo25p.768sg1bwK1BHe75.007779'
 s.physical_units()
 
 #centering halo and aligning disk
-#pynbody.analysis.angmom.faceon(s)
-pynbody.analysis.angmom.sideon(s)
+pynbody.analysis.angmom.faceon(s)
+#pynbody.analysis.angmom.sideon(s)
 
 #creating gas density slice
 sph.image(s.g,qty="rho",units="g cm^-3",width=60)
@@ -36,7 +36,8 @@ for i in range(len(BH)):
     BHy=BHposition[[i],1]
     BHz=BHposition[[i],2]
     plt.plot(BHx,BHy, 'ro')
-
-#plt.show()
+    plt.scatter(BHx, BHy, s=200, facecolors='none', edgecolors='b')
+    
+plt.show()
 #plt.savefig("galaxy154_dens.png")
-plt.savefig("galaxy154_dens(side).png")
+#plt.savefig("galaxy154_dens(side).png")

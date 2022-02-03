@@ -45,7 +45,8 @@ BHz=BHposition[[0],2]
 
 #plotting BH position
 plt.plot(BHx,BHy, 'ro')
+plt.scatter(BHx, BHy, s=200, facecolors='none', edgecolors='b')
 
-#plt.show()
-plt.savefig("galaxy142_dens.png")
+plt.show()
+#plt.savefig("galaxy142_dens.png")
 #plt.savefig("galaxy142_dens(side).png")
