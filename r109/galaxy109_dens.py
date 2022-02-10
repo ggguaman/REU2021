@@ -27,16 +27,18 @@ print("The number of black holes is",len(BH))
 
 #distance BH is from galaxy
 #with pynbody.analysis.halo.center(s, mode='hyb'):
-print([s],['pos'])
+#print([s],['pos'])
 
 BHposition = BH['pos']
-print("The black hole's position is", BHposition)
+#print("The black hole's position is", BHposition)
+print("The BHs position is",BH['pos'].in_units('kpc'))
 
 for i in range(len(BH)):
     BHx=BHposition[[i],0]
     BHy=BHposition[[i],1]
     BHz=BHposition[[i],2]
     plt.plot(BHx,BHy,'ro')
+    #sphere filter
     radius = "2 kpc"
     centre = (BHx[0], BHy[0], BHz[0])
     #print(centre)
