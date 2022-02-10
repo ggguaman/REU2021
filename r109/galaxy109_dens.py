@@ -1,7 +1,6 @@
 #r109 gas density plot with BHs pos
 import pynbody
 import numpy as np
-from pynbody.filt import *
 import pynbody.plot.sph as sph
 import matplotlib.pyplot as plt
 
@@ -42,7 +41,9 @@ for i in range(len(BH)):
     centre = (BHx[0], BHy[0], BHz[0])
     #print(centre)
     sphere = s.g[pynbody.filt.Sphere(radius, centre)]
+    print("The number of particles in the sphere is: ",len(sphere))
     print("The BHs density is", sphere["rho"])
+    print("The average density is: ",sphere["rho"].mean())
     
 plt.show()
 #plt.savefig("galaxy109_dens.png")

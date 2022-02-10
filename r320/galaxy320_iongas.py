@@ -13,8 +13,8 @@ s=pynbody.load('/mnt/data0/jillian/gguaman/r320/cosmo25p.768sg1bwK1BHe75.007779'
 s.physical_units()
 
 #centering halo
-#pynbody.analysis.angmom.faceon(s)
-pynbody.analysis.angmom.sideon(s)
+pynbody.analysis.angmom.faceon(s)
+#pynbody.analysis.angmom.sideon(s)
 
 #filter to only use ionised gas
 GasFilter = pynbody.filt.HighPass('temp','15848 K')
@@ -32,7 +32,7 @@ print("The number of black holes is",len(BH))
 
 #distance BH is from galaxy
 #with pynbody.analysis.halo.center(s, mode='hyb'):
-print([s],['pos'])
+#print([s],['pos'])
 
 BHposition = BH['pos']
 print("The black hole's position is", BHposition)
@@ -42,7 +42,14 @@ for i in range(len(BH)):
     BHy=BHposition[[i],1]
     BHz=BHposition[[i],2]
     plt.plot(BHx,BHy, 'ro')
-
-#plt.show()
+    #sphere filter
+    radius = "1.25 kpc"
+    center = (BHx[0], BHy[0], BHz[0])
+    sphere = s.g[GasFilter][pynbody.filt.Sphere(radius, center)]
+    print("The number of particles in the sphere is: ",len(sphere))
+    print("The density is ",sphere["rho"])
+    print("The average density is: ",sphere["rho"].mean())
+    
+plt.show()
 #plt.savefig("galaxy320_iongas.png")
-plt.savefig("galaxy320_iongas(side).png")
+#plt.savefig("galaxy320_iongas(side).png")

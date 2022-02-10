@@ -36,10 +36,12 @@ for i in range(len(BH)):
     BHy=BHposition[[i],1]
     BHz=BHposition[[i],2]
     plt.plot(BHx,BHy, 'ro')
-    radius = "1 kpc"
+    radius = "2 kpc"
     centre = (BHx[0], BHy[0], BHz[0])
-    sphere = s[pynbody.filt.Sphere(radius,centre)]
-    print(sphere["mass"].sum())
+    sphere = s.g[pynbody.filt.Sphere(radius,centre)]
+    print("The number of particles in the sphere is: ",len(sphere))
+    print("The density is",sphere["rho"])
+    print("The average density is",sphere["rho"].mean())
 
 plt.show()
 #plt.savefig("galaxy154_dens.png")
