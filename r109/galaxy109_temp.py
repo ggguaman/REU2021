@@ -12,8 +12,8 @@ s=pynbody.load('/mnt/data0/jillian/gguaman/cosmo25p.768sg1bwK1BHe75.008192')
 s.physical_units()
 
 #centering halo
-#pynbody.analysis.angmom.faceon(s)
-pynbody.analysis.angmom.sideon(s)
+pynbody.analysis.angmom.faceon(s)
+#pynbody.analysis.angmom.sideon(s)
 
 #creating slice to show gas temp
 sph.image(s.g,qty="temp",width=40,denoise=True,approximate_fast=False,log=True)
@@ -39,7 +39,11 @@ for i in range(len(BH)):
     BHy=BHposition[[i],1]
     BHz=BHposition[[i],2]
     plt.plot(BHx,BHy, 'ro')
+    radius = "1 kpc"
+    centre = (BHx[0], BHy[0], BHz[0])
+    sphere = s[pynbody.filt.Sphere(radius, centre)]
+    print(sphere["temp"])
 
-#plt.show()
+plt.show()
 #plt.savefig("galaxy109_temp.png")
-plt.savefig("galaxy109_temp(side).png")
+#plt.savefig("galaxy109_temp(side).png")

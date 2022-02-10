@@ -1,10 +1,9 @@
 #r109 gas density plot with BHs pos
 import pynbody
 import numpy as np
+from pynbody.filt import *
 import pynbody.plot.sph as sph
 import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
-from matplotlib.patches import Circle
 
 #loading snapshot
 s=pynbody.load('/mnt/data0/jillian/gguaman/cosmo25p.768sg1bwK1BHe75.008192')
@@ -40,11 +39,10 @@ for i in range(len(BH)):
     BHz=BHposition[[i],2]
     plt.plot(BHx,BHy,'ro')
     radius = "1 kpc"
-    #centre = (BHposition[[i],0], BHposition[[i],1], BHposition[[i],2])
-    centre = (BHx, BHy, BHz)
-    #centre = (0.0970237,-0.14596622, 0.0881323)
-    sphere = pynbody.filt.Sphere(radius, centre)
-    #sphere["mass"]
+    centre = (BHx[0], BHy[0], BHz[0])
+    #print(centre)
+    sphere = s[pynbody.filt.Sphere(radius, centre)]
+    print(sphere["rho"].sum())
     
 plt.show()
 #plt.savefig("galaxy109_dens.png")
