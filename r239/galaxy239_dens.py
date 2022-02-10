@@ -10,8 +10,8 @@ s=pynbody.load('/mnt/data0/jillian/gguaman/r239/cosmo25p.768sg1bwK1BHe75.007779'
 s.physical_units()
 
 #centering halo and aligning disk
-#pynbody.analysis.angmom.faceon(s)
-pynbody.analysis.angmom.sideon(s)
+pynbody.analysis.angmom.faceon(s)
+#pynbody.analysis.angmom.sideon(s)
 
 #creating gas density slice
 sph.image(s.g,qty="rho",units="g cm^-3",width=20)
@@ -46,6 +46,11 @@ BHz=BHposition[[0],2]
 #plotting BH position
 plt.plot(BHx,BHy, 'ro')
 
-#plt.show()
+radius = "1 kpc"
+centre = (BHx[0], BHy[0], BHz[0])
+sphere = s[pynbody.filt.Sphere(radius,centre)]
+print(sphere["mass"].sum())
+    
+plt.show()
 #plt.savefig("galaxy239_dens.png")
-plt.savefig("galaxy239_dens(side).png")
+#plt.savefig("galaxy239_dens(side).png")

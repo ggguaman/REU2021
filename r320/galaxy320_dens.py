@@ -10,13 +10,8 @@ s=pynbody.load('/mnt/data0/jillian/gguaman/r320/cosmo25p.768sg1bwK1BHe75.007779'
 s.physical_units()
 
 #centering halo and aligning disk
-#pynbody.analysis.angmom.faceon(s)
-pynbody.analysis.angmom.sideon(s)
-
-#sphere filter
-radius = "1 kpc"
-center = (0.4142082, -2.76123653, 1.39230917)
-sphere = s[pynbody.filt.Sphere(radius, center)]
+pynbody.analysis.angmom.faceon(s)
+#pynbody.analysis.angmom.sideon(s)
 
 #creating gas density slice
 sph.image(s.g,qty="rho",units="g cm^-3",width=20)
@@ -41,11 +36,12 @@ for i in range(len(BH)):
     BHy=BHposition[[i],1]
     BHz=BHposition[[i],2]
     plt.plot(BHx,BHy, 'ro')
-
-#sphere filter
-#radius = "1 kpc"
-#center = (0.4142082, -2.76123653, 1.39230917)
-#sphere = s[pynbody.filt.Sphere(radius, center)]
+    #sphere filter
+    radius = "1.25 kpc"
+    center = (BHx[0], BHy[0], BHz[0])
+    sphere = s.g[pynbody.filt.Sphere(radius, center)]
+    print(len(sphere))
+    print(sphere["rho"])
 
 plt.show()
 #plt.savefig("galaxy320_dens.png")

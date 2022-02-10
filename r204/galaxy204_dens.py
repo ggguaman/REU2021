@@ -45,8 +45,12 @@ BHz=BHposition[[0],2]
 
 #plotting BH position
 plt.plot(BHx,BHy, 'ro')
-plt.scatter(BHx, BHy, s=200, facecolors='none', edgecolors='b')
 
+radius = "1 kpc"
+centre = (BHx[0], BHy[0], BHz[0])
+sphere = s[pynbody.filt.Sphere(radius,centre)]
+print(sphere["mass"].sum())
+    
 plt.show()
 #plt.savefig("galaxy204_dens.png")
 #plt.savefig("galaxy204_dens(side).png")

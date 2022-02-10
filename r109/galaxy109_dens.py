@@ -38,11 +38,11 @@ for i in range(len(BH)):
     BHy=BHposition[[i],1]
     BHz=BHposition[[i],2]
     plt.plot(BHx,BHy,'ro')
-    radius = "1 kpc"
+    radius = "2 kpc"
     centre = (BHx[0], BHy[0], BHz[0])
     #print(centre)
-    sphere = s[pynbody.filt.Sphere(radius, centre)]
-    print(sphere["rho"].sum())
+    sphere = s.g[pynbody.filt.Sphere(radius, centre)]
+    print("The BHs density is", sphere["rho"])
     
 plt.show()
 #plt.savefig("galaxy109_dens.png")
