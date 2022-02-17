@@ -1,7 +1,6 @@
-#Stellar velocity map
-import numpy as np
+#galaxy 320 GG Stellar velocity map
 import pynbody
-import pandas as pd
+import numpy as np
 import pynbody.plot.sph as sph
 import matplotlib.pyplot as plt
 
