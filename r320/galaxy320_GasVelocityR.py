@@ -13,4 +13,5 @@ image_width=20
 gas_map, ax = plot_gas_map(filename, redshift, image_width, orientation="sideon")
 #gas_pa = calc_pa(gas_map)
 
-plt.show()
+#plt.show()
+plt.savefig("galaxy320_GasVelR.png")

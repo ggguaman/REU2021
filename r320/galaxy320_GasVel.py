@@ -15,7 +15,7 @@ s.physical_units()
 pynbody.analysis.angmom.sideon(s)
 
 #creating star velocity plot
-sph.image(s.g,qty="vx",av_z="mass",width='20 kpc',cmap="RdBu", log=False, units='km s**-1')
+sph.image(s.g,qty="vz",av_z="mass",width='20 kpc',cmap="RdBu", log=False, units='km s**-1')
 
 #function to find BH
 def findBH(s):
@@ -37,12 +37,6 @@ for i in range(len(BH)):
    #putting BH z in column
     BHz=BHposition[[i],2]
     plt.plot(BHx,BHy, 'ro')
-    #sphere filter
-    #radius = "1.25 kpc"
-    #center = (BHx[0], BHy[0], BHz[0])
-    #sphere = s.g[pynbody.filt.Sphere(radius, center)]
-    #print("The number of particles in the sphere is:",len(sphere))
-    #print("The stellar velocity is",sphere["vel"])
-    #print("The average stellar velocity is:",sphere["vel"].mean())
-
-plt.show()
+    
+#plt.show()
+plt.savefig("galaxy320_GasVelGG.png")
