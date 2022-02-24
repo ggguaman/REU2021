@@ -39,5 +39,5 @@ for i in range(len(BH)):
     BHz=BHposition[[i],2]
     plt.plot(BHx,BHy, 'ro')
     
-#plt.show()
-plt.savefig("galaxy320_GasVelGG.png")
+plt.show()
+#plt.savefig("galaxy320_GasVelGG.png")
