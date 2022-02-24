@@ -6,15 +6,16 @@ import matplotlib.pyplot as plt
 from pynbody_velmaps.position_angles import *
 from pynbody_velmaps.scripts.plot_manga_velmaps import *
 
-filename='/mnt/data0/jillian/gguaman/r142/cosmo25p.768sg1bwK1BHe75.007779'
+#filename='/mnt/data0/jillian/gguaman/r142/cosmo25p.768sg1bwK1BHe75.007779'
+filename='/mnt/data0/jillian/gguaman/r142/r142.007779.tipsy'
 redshift=0.05
 image_width=20
 
-gas_map, ax = plot_gas_map(filename, redshift, image_width, orientation="sideon")
+gas_map, ax = plot_manga_map(filename, redshift, "gas", image_width, orientation="sideon")
 #gas_pa = calc_pa(gas_map)
-plt.colorbar(ax.images[0])
-plt.xlabel('x/kpc')
-plt.ylabel('y/kpc')
+#plt.colorbar(ax.images[0])
+#plt.xlabel('x/kpc')
+#plt.ylabel('y/kpc')
 
-#plt.show()
-plt.savefig("galaxy142_GasVelR.png")
+plt.show()
+#plt.savefig("galaxy142_GasVelR.png")

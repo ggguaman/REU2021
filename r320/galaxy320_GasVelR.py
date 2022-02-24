@@ -6,7 +6,8 @@ import matplotlib.pyplot as plt
 from pynbody_velmaps.position_angles import *
 from pynbody_velmaps.scripts.plot_manga_velmaps import *
 
-filename='/mnt/data0/jillian/gguaman/r320/cosmo25p.768sg1bwK1BHe75.007779'
+#filename='/mnt/data0/jillian/gguaman/r320/cosmo25p.768sg1bwK1BHe75.007779'
+filename= '/mnt/data0/jillian/gguaman/r320/r320.007779.tipsy'
 redshift=0.03
 image_width=20
 
