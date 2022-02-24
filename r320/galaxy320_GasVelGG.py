@@ -5,7 +5,8 @@ import pynbody.plot.sph as sph
 import matplotlib.pyplot as plt
 
 #loading snapshot
-s=pynbody.load('/mnt/data0/jillian/gguaman/r320/cosmo25p.768sg1bwK1BHe75.007779')
+#s=pynbody.load('/mnt/data0/jillian/gguaman/r320/cosmo25p.768sg1bwK1BHe75.007779')
+s=pynbody.load('/mnt/data0/jillian/gguaman/r320/r320.007779.tipsy')
 
 #setting to physical units
 s.physical_units()
