@@ -11,11 +11,14 @@ filename= '/mnt/data0/jillian/gguaman/r320/r320.007779.tipsy'
 redshift=0.03
 image_width=20
 
-gas_map, ax = plot_manga_map(filename, redshift, "gas", image_width, vmin = -20, vmax = 40, orientation="sideon")
+def rho_sq(particles):
+    return particles['rho']**2
+
+gas_map, gas_pa, ax = plot_manga_map(filename, redshift, "gas", weights=rho_sq,image_width=image_width, orientation="sideon", cmap='RdBu',vmin=-100, vmax=100)
 #gas_pa = calc_pa(gas_map)
 #plt.colorbar(ax.images[0])
 #plt.xlabel('x/kpc')
 #plt.ylabel('y/kpc')
 
-plt.show()
-#plt.savefig("galaxy320_GasVelR.png")
+#plt.show()
+plt.savefig("galaxy320_GasVelR.png")

@@ -11,11 +11,11 @@ filename = '/mnt/data0/jillian/gguaman/r320/r320.007779.tipsy'
 redshift=0.01
 image_width=20
 
-stellar_map, ax = plot_manga_map(filename,redshift,"star",image_width,orientation="sideon")
+stellar_map, stellar_pa, ax = plot_manga_map(filename, redshift, "star", weights="mass", image_width=image_width, orientation="sideon", cmap='PuOr', vmin=-50, vmax=50)
 #stellar_pa = calc_pa(stellar_map)
 #plt.colorbar(ax.images[0])
 #plt.xlabel('x/kpc')
 #plt.ylabel('y/kpc')
 
-plt.show()
-#plt.savefig("galaxy320_StelVelR.png")
+#plt.show()
+plt.savefig("galaxy320_StelVelR.png")

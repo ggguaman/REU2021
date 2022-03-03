@@ -16,7 +16,7 @@ s.physical_units()
 pynbody.analysis.angmom.sideon(s)
 
 #creating star velocity plot
-sph.image(s.s,qty="vz",av_z="mass",width='20 kpc',cmap="PuOr", log=False, units='km s**-1')
+sph.image(s.s,qty="vz",width='20 kpc',cmap="PuOr", log=False, units='km s**-1')
 
 #function to find BH
 def findBH(s):
