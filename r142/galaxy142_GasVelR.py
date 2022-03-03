@@ -8,14 +8,17 @@ from pynbody_velmaps.scripts.plot_manga_velmaps import *
 
 #filename='/mnt/data0/jillian/gguaman/r142/cosmo25p.768sg1bwK1BHe75.007779'
 filename='/mnt/data0/jillian/gguaman/r142/r142.007779.tipsy'
-redshift=0.05
+redshift=0.03
 image_width=20
 
-gas_map, ax = plot_manga_map(filename, redshift, "gas", image_width, orientation="sideon")
+def rho_sq(particles):
+    return particles['rho']**2
+
+gas_map, gas_pa, ax = plot_manga_map(filename, redshift, "gas", weights=rho_sq, image_width=image_width, orientation="sideon", cmap='RdBu', vmin=-150, vmax=150)
 #gas_pa = calc_pa(gas_map)
 #plt.colorbar(ax.images[0])
 #plt.xlabel('x/kpc')
 #plt.ylabel('y/kpc')
 
 plt.show()
-#plt.savefig("galaxy142_GasVelR.png")
+plt.savefig("galaxy142_GasVelR.png")

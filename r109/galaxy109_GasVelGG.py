@@ -1,12 +1,10 @@
-#galaxy 142 GG Gas velocity code
+#galaxy 109 GG Gas velocity code
 import pynbody
 import numpy as np
 import pynbody.plot.sph as sph
 import matplotlib.pyplot as plt
 
-#loading snapshot
-#s=pynbody.load('/mnt/data0/jillian/gguaman/r142/cosmo25p.768sg1bwK1BHe75.007779')
-s=pynbody.load('/mnt/data0/jillian/gguaman/r142/r142.007779.tipsy')
+s=pynbody.load('/mnt/data0/jillian/gguaman/cosmo25p.768sg1bwK1BHe75.008192')
 
 #setting to physical units
 s.physical_units()
@@ -16,7 +14,7 @@ s.physical_units()
 pynbody.analysis.angmom.sideon(s)
 
 #creating star velocity plot
-sph.image(s.g,qty="vz",width='20 kpc',cmap="RdBu", log=False, units='km s**-1')
+sph.image(s.g,qty="vz",width='30 kpc',cmap="RdBu", log=False, units='km s**-1')
 
 #function to find BH
 def findBH(s):
@@ -38,6 +36,6 @@ for i in range(len(BH)):
    #putting BH z in column
     BHz=BHposition[[i],2]
     plt.plot(BHx,BHy, 'ro')
-
+    
 plt.show()
-plt.savefig("galaxy142_GasVelGG.png")
+plt.savefig("galaxy109_GasVelGG.png")
