@@ -25,5 +25,5 @@ def findBH(s):
 BH=findBH(s)
 print("The number of black holes is:",len(BH))
 
-plt.show()
+#plt.show()
 plt.savefig("galaxy223_StelVelGG.png")
