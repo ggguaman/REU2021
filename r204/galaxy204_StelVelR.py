@@ -12,5 +12,5 @@ image_width=20
 
 stellar_map, stellar_pa, ax = plot_manga_map(filename, redshift, "star", weights="mass", image_width=image_width, orientation="sideon", cmap='PuOr', vmin=-80, vmax=80)
 
-plt.show()
+#plt.show()
 plt.savefig("galaxy204_StelVelR.png")

@@ -17,5 +17,5 @@ stellar_map, stellar_pa, ax = plot_manga_map(filename, redshift, "star", weights
 #plt.xlabel('x/kpc')
 #plt.ylabel('y/kpc')
 
-plt.show()
+#plt.show()
 plt.savefig("galaxy142_StelVelR.png")

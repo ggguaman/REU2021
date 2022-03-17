@@ -20,5 +20,5 @@ gas_map, gas_pa, ax = plot_manga_map(filename, redshift, "gas", weights=rho_sq, 
 #plt.xlabel('x/kpc')
 #plt.ylabel('y/kpc')
 
-plt.show()
+#plt.show()
 plt.savefig("galaxy142_GasVelR.png")

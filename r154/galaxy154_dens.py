@@ -43,6 +43,6 @@ for i in range(len(BH)):
     print("The density is",sphere["rho"])
     print("The average density is",sphere["rho"].mean())
 
-plt.show()
-#plt.savefig("galaxy154_dens.png")
+#plt.show()
+plt.savefig("galaxy154_dens.png")
 #plt.savefig("galaxy154_dens(side).png")

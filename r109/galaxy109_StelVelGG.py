@@ -5,7 +5,8 @@ import pynbody.plot.sph as sph
 import matplotlib.pyplot as plt
 
 #loading snapshot
-s=pynbody.load('/mnt/data0/jillian/gguaman/cosmo25p.768sg1bwK1BHe75.008192')
+#s=pynbody.load('/mnt/data0/jillian/gguaman/cosmo25p.768sg1bwK1BHe75.008192')
+s=pynbody.load('/mnt/data0/jillian/gguaman/r109/r107.007779.tipsy')
 
 #setting to physical units
 s.physical_units()
@@ -39,4 +40,4 @@ for i in range(len(BH)):
     plt.plot(BHx,BHy, 'ro')
 
 plt.show()
-plt.savefig("galaxy109_StelVelGG.png")
+#plt.savefig("galaxy109_StelVelGG.png")
