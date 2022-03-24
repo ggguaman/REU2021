@@ -15,10 +15,6 @@ def rho_sq(particles):
     return particles['rho']**2
 
 gas_map, gas_pa, ax = plot_manga_map(filename, redshift, "gas", weights=rho_sq, image_width=image_width, orientation="sideon", cmap='RdBu', vmin=-150, vmax=150)
-#gas_pa = calc_pa(gas_map)
-#plt.colorbar(ax.images[0])
-#plt.xlabel('x/kpc')
-#plt.ylabel('y/kpc')
 
 #plt.show()
 plt.savefig("galaxy142_GasVelR.png")
