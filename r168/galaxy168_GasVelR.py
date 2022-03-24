@@ -1,4 +1,4 @@
-#galaxy 320 Ray's gas velocity code
+#galaxy 168 Ray's gas velocity code
 import pynbody
 import numpy as np
 import pynbody.plot.sph as sph
