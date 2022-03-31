@@ -13,7 +13,7 @@ image_width=20
 def rho_sq(particles):
     return particles['rho']**2
 
-gas_map, gas_pa, ax = plot_manga_map(filename, redshift, "gas", weights=rho_sq, image_width=image_width, orientation="sideon", cmap='RdBu', vmin=-100, vmax=100)
+gas_map, gas_pa, ax = plot_manga_map(filename, redshift, "gas", weights=rho_sq, image_width=image_width, orientation="sideon", cmap='RdBu', vmin=-150, vmax=150)
 
 #plt.show()
 plt.savefig("galaxy219_GasVelR.png")

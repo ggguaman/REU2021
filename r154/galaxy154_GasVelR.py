@@ -8,7 +8,7 @@ from pynbody_velmaps.scripts.plot_manga_velmaps import *
 
 filename='/mnt/data0/jillian/gguaman/r154/cosmo25p.768sg1bwK1BHe75.007779'
 redshift=0.03
-image_width=20
+image_width=60
 
 def rho_sq(particles):
     return particles['rho']**2
