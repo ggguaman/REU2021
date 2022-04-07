@@ -11,7 +11,7 @@ filename='/mnt/data0/jillian/gguaman/r239/cosmo25p.768sg1bwK1BHe75.007779'
 redshift=0.01
 image_width=20
 
-stellar_map, stellar_pa, ax = plot_manga_map(filename, redshift, "star", weights="mass", image_width=image_width, orientation="sideon", cmap='PuOr', vmin=-70, vmax=70)
+stellar_map, stellar_pa, ax = plot_manga_map(filename, redshift, "star", weights="mass", image_width=image_width, orientation="sideon", cmap='PuOr', vmin=-80, vmax=80)
 
 #plt.show()
 plt.savefig("galaxy239_StelVelR.png")
