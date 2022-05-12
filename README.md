@@ -1,7 +1,7 @@
 # REU2021
 REU QCC 2021
 
-This reasearch was conducted through Queensborough Community College Research Experience for Undergraduate Students 
+This research was conducted through Queensborough Community College Research Experience for Undergraduate Students 
 with the help of co-advisors Dr. Jillian Bellovary and Ray Sharma. My work focused on studying the effects that 
 intermediate mass black holes may have on sixteen dwarf galaxies from the ROMULUS simulation. I created various 
 gas property maps which include density, temperature, and velocity some of which had black holes, some without, 
