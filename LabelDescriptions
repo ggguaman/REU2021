@@ -1,0 +1,21 @@
+File Label Descriptions:
+r# - galaxy number
+.py - python sourcecode file 
+.png - image file
+
+1.) BHpos: black hole position[s]
+2.) GasVelGG: Giselle’s gas velocity, centered on stars in z-plane
+3.) GasVelR: Ray’s gas velocity
+4.) StelVelGG: Giselle’s stellar velocity, centered on stars in z-plane
+5.) StelVelR: Ray’s stellar velocity
+6.) dens(side): gas density side-on
+7.) dens: gas density face-on
+8.) gashist: gas particle histogram to determine the difference between “normal” gas and ionized gas
+9.) iongas(side): ionized gas velocity side-on
+10.)iongas: ionized gas velocity face-on
+11.)stars(side): stars side-on
+12.)stars: stars face-on
+13.)temp(side): gas temperature side-on
+14.)temp: gas temperature face-on
+15.)velocity(side): gas velocity side-on
+16.)velocity: gas velocity face-on
